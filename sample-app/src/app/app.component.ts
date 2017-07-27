@@ -59,6 +59,15 @@ import {Observable} from "rxjs/Observable";
       </ng-container>
 
 
+      <ng-template #customTabButtons>
+          <div class="custom-class">
+              <button class="tab-button" (click)="login()">{{loginText}}</button>
+              <button class="tab-button" (click)="signUp()">{{signUpText}}</button>
+          </div>
+      </ng-template>
+
+      <tab-container [headerTemplate]="defaultTabButtons"></tab-container>
+      
       
   `})
 export class AppComponent implements OnInit {
